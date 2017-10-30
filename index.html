@@ -1,0 +1,73 @@
+<!-- DOCTYPE HTML -->
+<html>
+<head>
+<title>React</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+
+</head>
+<body>
+<div id="content"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>   
+<script src="https://fb.me/react-0.14.6.js"></script>
+<script src="https://fb.me/react-dom-0.14.6.js"></script>
+<script src="http://fb.me/JSXTransformer-0.12.1.js"></script>
+<script type="text/jsx">
+
+var App = React.createClass({
+    render: function(){
+        return (
+            <div>
+                <SearchBox />
+                <Results />
+            </div>
+        );
+    }
+});
+
+var SearchBox = React.createClass({
+    render: function(){
+        return (
+            <div>
+              <h1>react tests</h1>
+				<div id="search">
+
+                <input type="text" />
+                <select>
+                    <option value="software">Apps</option>
+                    <option value="movie">Films</option>
+                    <option value="pics">Pics</option>
+                    <option value="animals">Animals</option>
+                    <option value="bs">bs</option>
+                </select>
+                <input type="submit" />
+    		 </div>   
+
+        <img src="http://www.imgworlds.com/wp-content/uploads/2015/12/18-CONTACTUS-HEADER.jpg" />
+
+            </div>
+        );
+    }
+});
+
+
+var Results = React.createClass({
+    render: function(){
+        return(
+            <ul>
+                <ResultItem />
+            </ul>           
+        );
+    }
+});
+
+var ResultItem = React.createClass({
+    render: function(){
+        return <li>a search result item</li>;
+    }
+});
+
+ReactDOM.render(<App />,  document.getElementById("content"));
+
+</script>
+</html>
